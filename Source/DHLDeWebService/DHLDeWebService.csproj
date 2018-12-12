@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1E30311E-80A2-4444-9C2C-BAF32DDE965A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DHLDeWebService</RootNamespace>
+    <AssemblyName>DHLDeWebService</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\AcceptedValuesAttribute.cs" />
+    <Compile Include="Attributes\CompositeValidationResult.cs" />
+    <Compile Include="Attributes\ServiceValidationAttribute.cs" />
+    <Compile Include="Attributes\ValidateObjectAttribute.cs" />
+    <Compile Include="DHLDeService.cs" />
+    <Compile Include="Entities\Constants.cs" />
+    <Compile Include="Entities\Misc\AdditionalInsurance.cs" />
+    <Compile Include="Entities\Misc\Address.cs" />
+    <Compile Include="Entities\Misc\AddressBaseType.cs" />
+    <Compile Include="Entities\Misc\AddressReceiver.cs" />
+    <Compile Include="Entities\Misc\Athentification.cs" />
+    <Compile Include="Entities\Misc\BankData.cs" />
+    <Compile Include="Entities\Misc\CashOnDelivery.cs" />
+    <Compile Include="Entities\Misc\Communication.cs" />
+    <Compile Include="Entities\Misc\OperationState.cs" />
+    <Compile Include="Entities\Misc\DayOfDelivery.cs" />
+    <Compile Include="Entities\Misc\DeliveryTimeframe.cs" />
+    <Compile Include="Entities\Misc\DHLBody.cs" />
+    <Compile Include="Entities\Misc\DHLHeader.cs" />
+    <Compile Include="Entities\Misc\DHLService.cs" />
+    <Compile Include="Entities\Misc\DHLServiceBaseType.cs" />
+    <Compile Include="Entities\Misc\DHLVersion.cs" />
+    <Compile Include="Entities\Misc\Endorsement.cs" />
+    <Compile Include="Entities\Misc\ExportDocPosition.cs" />
+    <Compile Include="Entities\Misc\ExportDocument.cs" />
+    <Compile Include="Entities\Misc\Ident.cs" />
+    <Compile Include="Entities\Misc\IdentCheck.cs" />
+    <Compile Include="Entities\Misc\IndividualSenderRequirement.cs" />
+    <Compile Include="Entities\Misc\LabelData.cs" />
+    <Compile Include="Entities\Misc\Name.cs" />
+    <Compile Include="Entities\Misc\NoticeOfNonDeliverability.cs" />
+    <Compile Include="Entities\Misc\Notification.cs" />
+    <Compile Include="Entities\Misc\Origin.cs" />
+    <Compile Include="Entities\Misc\Packstation.cs" />
+    <Compile Include="Entities\Misc\ParcelOutletRouting.cs" />
+    <Compile Include="Entities\Misc\ParcelShop.cs" />
+    <Compile Include="Entities\Misc\Postfiliale.cs" />
+    <Compile Include="Entities\Misc\PreferredDay.cs" />
+    <Compile Include="Entities\Misc\PreferredLocation.cs" />
+    <Compile Include="Entities\Misc\PreferredNeighbour.cs" />
+    <Compile Include="Entities\Misc\PreferredTime.cs" />
+    <Compile Include="Entities\Misc\Receiver.cs" />
+    <Compile Include="Entities\Misc\ReturnReceiver.cs" />
+    <Compile Include="Entities\Misc\Shipment.cs" />
+    <Compile Include="Entities\Misc\ShipmentDetail.cs" />
+    <Compile Include="Entities\Misc\ShipmentHandling.cs" />
+    <Compile Include="Entities\Misc\ShipmentItem.cs" />
+    <Compile Include="Entities\Misc\ShipmentOrder.cs" />
+    <Compile Include="Entities\Misc\Shipper.cs" />
+    <Compile Include="Entities\Misc\Status.cs" />
+    <Compile Include="Entities\Misc\VisualCheckOfAge.cs" />
+    <Compile Include="Entities\Request\Concrete\DeleteShipmentOrderRequest.cs" />
+    <Compile Include="Entities\Request\Concrete\DHLDeleteShipmentOrderRequest.cs" />
+    <Compile Include="Entities\Request\Concrete\DHLGetLabelRequest.cs" />
+    <Compile Include="Entities\Request\Concrete\GetLabelRequest.cs" />
+    <Compile Include="Entities\Request\Concrete\UpdateShipmentOrderRequest.cs" />
+    <Compile Include="Entities\Request\Concrete\CreateShipmentOrderRequest.cs" />
+    <Compile Include="Entities\Request\Concrete\DHLUpdateShipmentOrderRequest.cs" />
+    <Compile Include="Entities\Request\Concrete\DHLGetVersionRequest.cs" />
+    <Compile Include="Entities\Request\Concrete\DHLRequest.cs" />
+    <Compile Include="Entities\Request\Abstract\IDHLRequest.cs" />
+    <Compile Include="Entities\Request\Concrete\DHLCreateShipmentOrderRequest.cs" />
+    <Compile Include="Entities\Response\Abstract\IDHLResponse.cs" />
+    <Compile Include="Entities\Response\Concrete\DeleteShipmentOrderResponse.cs" />
+    <Compile Include="Entities\Response\Concrete\DHLDeleteShipmentOrderResponse.cs" />
+    <Compile Include="Entities\Response\Concrete\DHLGetLabelResponse.cs" />
+    <Compile Include="Entities\Response\Concrete\GetLabelResponse.cs" />
+    <Compile Include="Entities\Response\Concrete\UpdateShipmentOrderResponse.cs" />
+    <Compile Include="Entities\Response\Concrete\CreateShipmentOrderResponse.cs" />
+    <Compile Include="Entities\Response\Concrete\DHLUpdateShipmentOrderResponse .cs" />
+    <Compile Include="Entities\Response\Concrete\DHLCreateShipmentOrderResponse.cs" />
+    <Compile Include="Entities\Response\Concrete\DHLGetVersionResponse.cs" />
+    <Compile Include="Entities\Response\Concrete\DHLResponse.cs" />
+    <Compile Include="Extensions\XMLService.cs" />
+    <Compile Include="HttpCom\HttpComunicationService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="config\credentials.json" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
